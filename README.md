@@ -9,8 +9,9 @@ https://github.com/woowacourse/java-racingcar-precourse
 ## 브랜치
 - `main`브랜치가 아닌, 프로젝트 별 브랜치를 생성하여 진행합니다.
   - ex) 브랜치 명을 `java_racing_car_손현경` 으로 생성합니다.
-- 구현이 끝나면, `PR`을 올리고, `Review`가 진행됩니다.
-- 리뷰에 달린 수정사항들을 반영한 후 `Merge`합니다.
+- 구현이 끝나면, `PR`을 올리고, `Assignee`를 본인으로 지정합니다.
+- 스터디장이 `Reviewers`를 한 프로젝트 당 `3명`씩 지정하고, `Code Review`를 진행합니다.
+- 리뷰에 달린 수정사항들을 반영한 후 `main`에 `Merge`합니다.
 ## 폴더명
 - 자신의 작업물은 자신의 깃허브 아이디 디렉토리에서 관리합니다.
   - ex) shkisme/java_racing_car
