@@ -6,14 +6,12 @@ public class Input {
     private static final Scanner scanner = new Scanner(System.in);
     private static int inputNumber;
 
-    public static int getInputNumber() {
+    public int getInputNumber() {
         return inputNumber;
     }
 
     public static void getInput() {
-        String result = "";
-        int inputN = validInput(scanner.next());
-        inputNumber = inputN;
+        int inputNumber = validInput(scanner.next());
     }
 
     public static int validInput(String in) {
