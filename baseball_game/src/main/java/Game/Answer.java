@@ -33,12 +33,9 @@ public class Answer {
         int tens = (answerNumber/10)%10;
         int hundreds = answerNumber/100;
 
-        // strike 수 세기
-        Evaluate.countStrike(guess, hundreds, tens, units);
-        Evaluate.countBall(guess, hundreds, tens, units);
-
-        int strike = Evaluate.getStrike();
-        int ball = Evaluate.getBall();
+        // strike, ball 수 세기
+        int strike = Evaluate.countStrike(guess, hundreds, tens, units);
+        int ball = Evaluate.countBall(guess, hundreds, tens, units);
 
         if(strike==0 && ball==0) {
             System.out.print("낫싱\n");
