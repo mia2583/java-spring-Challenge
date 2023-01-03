@@ -11,10 +11,10 @@ public class Input {
     }
 
     public static void getInput() {
-        int inputNumber = validInput(scanner.next());
+        inputNumber = validInput(scanner.next());
     }
 
-    public static int validInput(String in) {
+    private static int validInput(String in) {
         try {
             int num = Integer.parseInt(in);
             return num;

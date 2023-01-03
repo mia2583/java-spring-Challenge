@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Answer {
     private int answerNumber;
-    private static Random random = new Random();
+    private final static Random random = new Random();
     Answer() {
         makeRandomNumber();
     }
