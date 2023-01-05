@@ -4,13 +4,17 @@ import java.util.Arrays;
 
 // Game을 진행하는데 값의 검증을 도와주는 클래스
 public class GameValidator {
-    public Boolean validNameInput(String names) {
+
+    public GameValidator() {};
+    public void validNameInput(String names) {
         // 입력 가능한 이름인지 확인
-        return true;
+        if (Arrays.stream(names.split(",")).filter(s -> s.length() > 5).count() > 0) {
+            throw new IllegalArgumentException("자동차의 각 이름은 5글자 이하여야 합니다.");
+        }
     }
     
-    public Boolean validTrialInput(String trial) {
+    public void validTrialInput(String trial) {
         // 입력한 시도횟수가 숫자인지 검증
-        return true;
+        Integer.parseInt(trial);
     }
 }
