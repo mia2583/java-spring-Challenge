@@ -1,18 +1,21 @@
 package org.example;
 
+import org.example.domain.Car;
 import org.example.util.GameUtill;
-import org.example.util.GameValidator;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 // Game 1회를 진행하는데 필요한 클래스
 public class GamePlay {
-    GameUtill gameUtill = new GameUtill();
+    String[] names;
+    Car[] cars;
+    int trial;
+    final GameUtill gameUtill = new GameUtill();
 
     public void input() {
-        gameUtill.inputName();
-        gameUtill.inputTrial();
+        names = gameUtill.inputName().split(",");
+        // 입력만큼 자동차 객체 생성
+        cars = gameUtill.makeCars(names);
+        trial = Integer.parseInt(gameUtill.inputTrial());
     }
     // 게임 진행하기
     void Racing() {
