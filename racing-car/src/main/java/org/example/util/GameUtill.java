@@ -32,6 +32,7 @@ public class GameUtill {
             trial = scanner.next();
             validator.validTrialInput(trial);
         } catch (NumberFormatException e) {
+            System.out.println("[ERROR] 시도 횟수는 숫자여야 한다.");
             trial = inputTrial();
         }
         return trial;

@@ -9,7 +9,7 @@ public class GameValidator {
     public void validNameInput(String names) {
         // 입력 가능한 이름인지 확인
         if (Arrays.stream(names.split(",")).filter(s -> s.length() > 5).count() > 0) {
-            throw new IllegalArgumentException("자동차의 각 이름은 5글자 이하여야 합니다.");
+            throw new IllegalArgumentException("[ERROR] 자동차의 각 이름은 5글자 이하여야 합니다.");
         }
     }
     
