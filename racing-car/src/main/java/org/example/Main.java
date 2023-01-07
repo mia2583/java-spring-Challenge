@@ -6,6 +6,7 @@ public class Main {
         // 입력받기(이름, 횟수)
         game.input();
         // 게임 진행
+        game.Racing();
         // 출력하기
     }
 }

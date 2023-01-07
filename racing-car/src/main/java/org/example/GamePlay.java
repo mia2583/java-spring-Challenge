@@ -21,7 +21,15 @@ public class GamePlay {
     void Racing() {
         // 각 자동차에 대해서 시도횟수만큼 반복하여 전진 횟수 계산
         // 이동 결과 출력하기
-
+        for (int i=0; i<trial; i++) {
+            for (Car car : cars) {
+                if (gameUtill.moveForward()) {
+                    car.addPosition();
+                }
+                car.printPosition();
+            }
+            System.out.println();
+        }
     }
 
     // 결과 출력하기

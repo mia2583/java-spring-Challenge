@@ -49,15 +49,19 @@ public class GameUtill {
 
     int getRandomNumber() {
         // 0-9사이의 랜덤 값 출력
-        return 0;
+        return (int) (Math.random()*9);
     }
     
-    Boolean MoveForward() {
+    public Boolean moveForward() {
         // getRandomNumber에서 값이 4이상이면 전진(true)
-        return true;
+        if(getRandomNumber() > 3) return true;
+        else return false;
     }
 
-    void printRacing() {
+    void printRacing(Car[] cars) {
         // 현재까지의 이동 결과 출력
+        for (Car car : cars) {
+            car.printPosition();
+        }
     }
 }
