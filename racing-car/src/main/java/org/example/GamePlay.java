@@ -3,6 +3,8 @@ package org.example;
 import org.example.domain.Car;
 import org.example.util.GameUtill;
 
+import java.util.*;
+import java.util.stream.Collectors;
 
 // Game 1회를 진행하는데 필요한 클래스
 public class GamePlay {
@@ -35,5 +37,9 @@ public class GamePlay {
     // 결과 출력하기
     void printWinner() {
         // 우승자 출력
+        final int maxPosition = Arrays.stream(cars).map(Car::getPosition).reduce(0, (a,b)->Math.max(a, b));
+        System.out.println(
+                Arrays.stream(cars).filter(c->c.getPosition()==maxPosition).map(Car::getName).collect(Collectors.joining(", "))
+        );
     }
 }

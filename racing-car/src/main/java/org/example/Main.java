@@ -8,5 +8,6 @@ public class Main {
         // 게임 진행
         game.Racing();
         // 출력하기
+        game.printWinner();
     }
 }
